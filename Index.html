@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HexSlider</title>
+</head>
+<style>
+ .slider{
+  height:2vh;
+  width:100%;
+  -webkit-appearance: none;
+  outline: none;
+  background: #42445A;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height:2vh;
+  width:1%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+<body>
+<input type="range" min="1" max="999999" class="slider" id="myRange" onchange="myFunction()">
+<script>
+function myFunction()
+{  
+  var x = document.getElementById("myRange").value;
+  document.body.style.backgroundColor="#"+x;
+  }
+</script>
+</body>
+</html>
