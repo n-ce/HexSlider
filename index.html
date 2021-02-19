@@ -15,10 +15,10 @@
       height:97vh;
     }
     .rs-path-color{
-      background-color: deepskyblue;
+      background-color: indianred;
     }
     .rs-handle{
-      background-color: royalblue;
+      background-color: darkred;
     }
     </style>
 </head>
@@ -31,12 +31,12 @@
    handleSize:22,
    radius:140,
    showTooltip:false,
+   min:100000,
    max:999999,
    update: function () {
    var x = $("#slider").roundSlider("getValue");
    document.body.style.backgroundColor="#"+x;
-   var y =document.getElementsByClassName("rs-bg-color");
-   y[0].style.backgroundColor="#"+x;
+   document.getElementsByClassName("rs-bg-color")[0].style.backgroundColor="#"+x;
    }
  });
 </script>
