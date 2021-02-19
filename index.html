@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js" type="text/javascript" charset="utf-8"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+    body{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height:97vh;
+    }
+    .rs-path-color{
+      background-color: deepskyblue;
+    }
+    .rs-handle{
+      background-color: royalblue;
+    }
+    </style>
+</head>
+<body>
+<div id="slider"></div>
+</body>
+<script>
+ $("#slider").roundSlider({
+   width:5,
+   handleSize:22,
+   radius:140,
+   showTooltip:false,
+   max:999999,
+   update: function () {
+   var x = $("#slider").roundSlider("getValue");
+   document.body.style.backgroundColor="#"+x;
+   var y =document.getElementsByClassName("rs-bg-color");
+   y[0].style.backgroundColor="#"+x;
+   }
+ });
+</script>
+</html>
